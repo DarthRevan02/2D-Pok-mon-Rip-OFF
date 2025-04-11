@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=3 uid="uid://5kf0jv4pohu4"]
+
+[ext_resource type="Texture2D" uid="uid://bn3fojert7skp" path="res://Assests/Flowers/red_flower.png" id="1_i1ygp"]
+[ext_resource type="Script" path="res://Scripts/flower.gd" id="2_48qs0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eh57i"]
+atlas = ExtResource("1_i1ygp")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3x51"]
+atlas = ExtResource("1_i1ygp")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ek52c"]
+atlas = ExtResource("1_i1ygp")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e5bos"]
+atlas = ExtResource("1_i1ygp")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_134uj"]
+atlas = ExtResource("1_i1ygp")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wdv2h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eh57i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3x51")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ek52c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e5bos")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_134uj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Flower" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_wdv2h")
+autoplay = "default"
+frame_progress = 0.545936
+centered = false
+script = ExtResource("2_48qs0")
